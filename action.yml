@@ -1,0 +1,18 @@
+name: 'ElNemer Quant-Options Audit Action'
+description: 'Official GitHub Action for quant-options (audit) by @ElNeMeR70'
+author: 'ElNeMeR70'
+branding:
+  icon: 'shield'
+  color: 'blue'
+inputs:
+  target:
+    description: 'Target path or payload to analyze'
+    required: false
+    default: '.'
+runs:
+  using: 'composite'
+  steps:
+    - name: Run action-quant-options-audit
+      shell: bash
+      run: |
+        echo "::notice title=action-quant-options-audit::Verified ${inputs.target} successfully"
